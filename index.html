@@ -35,7 +35,7 @@
 
        <footer>
         <h1>© 2025 TTM</h1>
-       <a href="tel:+917036940369"><h1>+91 70369 40369</h1></a>
+      <h1><a href="tel:+917036940369">+91 70369 40369</a></h1>
 
        </footer>
     
@@ -51,29 +51,55 @@
             // Local file included in this repo
             'savitri-amma2.gif','savitri-amma.gif','savitri-amma3.gif','actress-4.gif','actor-5.gif','actress-6.gif'
             // Example remote images (replace with your own or add local files in an /images folder)
-           
         ];
 
         // Pick a random background
         const choice = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        
+        // Create a style element for global CSS fixes
+        const style = document.createElement('style');
+        style.textContent = `
+            html, body {
+                min-height: 100vh;
+                min-height: -webkit-fill-available;
+                padding: 0;
+            }
+            html {
+                height: -webkit-fill-available;
+               min-height: 100vh;
+                min-height: -webkit-fill-available;
+                width: 100%;
+                margin: 0;
+                background-image: url("${choice}");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed; /* Prevents background shift on pull */
+                transition: background-image 400ms ease-in-out;
+                /* Ensure content sits above the background */
+                position: relative;
+                z-index: 1;
+            }
+            body {
+                
+            }
+            /* Fix for mobile pull-to-refresh */
+            @supports (-webkit-touch-callout: none) {
+                body {
+                    min-height: -webkit-fill-available;
+                }
+            }
+        `;
+        document.head.appendChild(style);
 
-        // Apply safety defaults and styling for full-bleed background
-        document.documentElement.style.height = '100%';
-        document.body.style.minHeight = '100vh';
-        document.body.style.margin = '0';
-        document.body.style.backgroundImage = `url("${choice}")`;
-        document.body.style.backgroundSize = 'cover';
-        document.body.style.backgroundPosition = 'center center';
-        document.body.style.backgroundRepeat = 'no-repeat';
-        document.body.style.transition = 'background-image 400ms ease-in-out, background-color 400ms ease-in-out';
-
-        // Optional: if you want a subtle overlay for text readability, toggle this block
-        // const overlay = document.createElement('div');
-        // overlay.style.position = 'fixed';
-        // overlay.style.inset = '0';
-        // overlay.style.pointerEvents = 'none';
-        // overlay.style.background = 'rgba(255,255,255,0.12)';
-        // document.body.appendChild(overlay);
+        // Optional: if you want a subtle overlay for text readability
+        const overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.inset = '0';
+        overlay.style.pointerEvents = 'none';
+        overlay.style.background = 'rgba(255,255,255,0.12)';
+        overlay.style.zIndex = '0';
+        document.body.appendChild(overlay);
     });
 </script>
 </html>

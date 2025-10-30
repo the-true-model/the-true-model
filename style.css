@@ -1,12 +1,9 @@
 html {
-    background-image: url('/savitri-savitri-amma2.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: black;
     height: 100vh;
     padding: 0;
-    margin:0;
     font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
 }
 
 a {
@@ -15,6 +12,10 @@ a {
 }
 a:hover {
     font-style: italic;
+}
+
+body {
+    margin:8px;
 }
 
 header {
@@ -37,11 +38,11 @@ footer{
 
 .About{
     margin: auto;
-    width: 50%;
+    width: 60%;
 }
 
 p, h1{
-    font-size: 2em;
+    font-size: 2rem;
     color: wheat;
 }
 
@@ -49,13 +50,17 @@ p, h1{
     .About{
         width: 98%;
     }
-    p, h1{
-        font-size: 1.8em;
+
+    body{
+        margin:8px;
     }
+ p,h1{
+    font-size: 1.2rem;
+ }
     footer {
        position: fixed;
     bottom: 0;
-    width: 99%;
+    width: 99% !important;
     display: flex;
     justify-content: space-between;
     }
