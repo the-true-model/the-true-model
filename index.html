@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="A brief description of the page content">
+    <meta name="keywords" content="">
+    <meta name="author" content="Your Name">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="canonical" href="https://www.thetruemodel.com/">
+    <meta property="og:title" content="The True Model">
+    <meta property="og:description" content="A brief description of the page content">
+    <meta property="og:image" content="https://www.thetruemodel.com/image.jpg">
+    <meta property="og:url" content="https://www.thetruemodel.com/">
+
+
+     <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
+    <script src="https://rawgit.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
+    
+    <title>The True Model</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <header>
+        <h1>The True Model</h1>
+       <h1><a href="mailto:hello@thetruemodel.com">hello@thetruemodel.com</a></h1>
+    </header>
+    <div class="container">
+       
+    </div>
+         <div class="About">
+            <p>At True model modern minimalism meets emotive storytelling — where shock comes not from excess, but from truth, depth, and raw beauty. Every brand, image, and word is chosen to evoke a sense of aesthetic balance, niche discovery, and soulful wellness.</p>
+
+            <p>Beyond a marketplace, it’s a living gallery of beauty and care — a space where creators share the stories behind products, the rituals that inspire them, and the meanings they carry get visible. Here you don’t just discover products; you discover worlds, textures, and emotions.</p>
+        </div>
+        
+
+       <footer>
+        <h1>© 2025 TTM</h1>
+       <a href="tel:+917036940369"><h1>+91 70369 40369</h1></a>
+
+       </footer>
     
+ 
+ 
+
 </body>
+<script>
+    // Random background image on page load
+    // Edit the `backgrounds` array to include local image paths or remote URLs.
+    document.addEventListener('DOMContentLoaded', function () {
+        const backgrounds = [
+            // Local file included in this repo
+            'savitri-amma2.gif','savitri-amma.gif','savitri-amma3.gif','actress-4.gif','actor-5.gif','actress-6.gif'
+            // Example remote images (replace with your own or add local files in an /images folder)
+           
+        ];
+
+        // Pick a random background
+        const choice = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+        // Apply safety defaults and styling for full-bleed background
+        document.documentElement.style.height = '100%';
+        document.body.style.minHeight = '100vh';
+        document.body.style.margin = '0';
+        document.body.style.backgroundImage = `url("${choice}")`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center center';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.transition = 'background-image 400ms ease-in-out, background-color 400ms ease-in-out';
+
+        // Optional: if you want a subtle overlay for text readability, toggle this block
+        // const overlay = document.createElement('div');
+        // overlay.style.position = 'fixed';
+        // overlay.style.inset = '0';
+        // overlay.style.pointerEvents = 'none';
+        // overlay.style.background = 'rgba(255,255,255,0.12)';
+        // document.body.appendChild(overlay);
+    });
+</script>
 </html>

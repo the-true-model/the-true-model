@@ -1,0 +1,62 @@
+html {
+    background-image: url('/savitri-savitri-amma2.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    padding: 0;
+    margin:0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: wheat;
+    text-decoration: none;
+}
+a:hover {
+    font-style: italic;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    }
+
+h1{
+    display: inline;
+    }
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+
+    }
+
+.About{
+    margin: auto;
+    width: 50%;
+}
+
+p, h1{
+    font-size: 2em;
+    color: wheat;
+}
+
+@media screen and (max-width: 768px) {
+    .About{
+        width: 98%;
+    }
+    p, h1{
+        font-size: 1.8em;
+    }
+    footer {
+       position: fixed;
+    bottom: 0;
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    }
+}
